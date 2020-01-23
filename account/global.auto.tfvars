@@ -1,0 +1,1 @@
+../common/global.auto.tfvars
