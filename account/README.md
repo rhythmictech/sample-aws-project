@@ -1,5 +1,14 @@
 # Account Settings
 
+## Initial Setup
+
+```
+git clone https://github.com/rhythmictech/sample-aws-project.git
+cd sample-aws-project/account
+./setup.sh
+
+```
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Providers
 

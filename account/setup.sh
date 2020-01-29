@@ -16,4 +16,4 @@ cd ..
 echo "Migrating tfstate to bucket"
 cp setup/terraform.tfstate .
 terraform init -backend-config=backend.auto.tfvars
-rm terraform.tfstate
+# rm terraform.tfstate
