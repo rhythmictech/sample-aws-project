@@ -9,4 +9,3 @@ module "backend" {
   region = var.region
   tags   = var.tags
 }
-

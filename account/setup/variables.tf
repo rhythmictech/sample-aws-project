@@ -29,6 +29,3 @@ variable "tfstate_key" {
   description = "Key that tfstate is stored in"
   type        = string
 }
-
-
-
