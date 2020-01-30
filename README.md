@@ -1,4 +1,6 @@
 # sample-aws-project
+[![GH Action Status](https://github.com/rhythmictech/sample-aws-project/workflows/pre-commit-check/badge.svg)](https://github.com/rhythmictech/sample-aws-project/actions)
+
 
 A sample AWS project managed by Terraform
 
