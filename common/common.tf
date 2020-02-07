@@ -6,14 +6,9 @@ provider "aws" {
 }
 
 terraform {
-  backend "s3" {
-    bucket = var.tfstate_bucket
-    key    = var.tfstate_key
-    region = var.region
-  }
+  backend "s3" {}
 
   required_version = ">= 0.12.0"
-
 }
 
 # Intentionally throws an error if the workspace doesn't match the env
@@ -39,17 +34,17 @@ variable "region" {
   type        = string
 }
 
-variable "tfstate_bucket" {
+variable "bucket" {
   description = "Bucket that tfstate is stored in"
   type        = string
 }
 
-variable "tfstate_dynamodb_table" {
+variable "dynamodb_table" {
   description = "DynamoDB table for locking/state management"
   type        = string
 }
 
-variable "tfstate_key" {
+variable "key" {
   description = "Key that tfstate is stored in"
   type        = string
 }
