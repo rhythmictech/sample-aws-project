@@ -4,6 +4,39 @@
 
 A sample AWS project managed by Terraform
 
+## About
+This repo is set up to contain _everything_ in a single AWS account.
+
+
+### Structure
+The top level structure of the repo should look something like the tree below
+with each "`project`" containing some application of shared infrastructure.
+Besides the project directories there are a few special ones;
+- `common`, which houses code that should be common to every project
+- `modules`, where client-specific modules kept
+- `bin`, where scripts are kept
+
+```
+repo
+│
+└───common
+│   │   common.tf
+│   │   global.auto.tfvars
+│
+└───modules
+│
+└───project
+│   │   main.tf
+|   |   outputs.tf
+│   │   variables.tf
+|
+|   .gitignore
+|   .pre-commit.yml
+|   .terraform-version
+|   README.md
+```
+
+
 ## Initial Setup
 
 There is a handy setup script at `bin/setup.sh` which will create a
@@ -20,3 +53,11 @@ To all the DevOps engineers out there with bosses to impress it's easy to do jus
 1. Clone the repo: `git clone https://github.com/rhythmictech/sample-aws-project.git terraform-aws-rhythmictech`
 1. Update the values for the backend in `account/backend.auto.tfvars`
 1. Run the setup with `make setup`
+
+## Creating a new project
+
+To bootsrap the addition of new projects there is a handy shell script,
+`bin/new-project.sh` that does everything needed besides write the code;
+- gets the backend variables from the backend `account/backend.auto.tfvars` file
+- creates the new folder with a backend, readme, and makefile
+- symlinks everything in `common` to the new folder
