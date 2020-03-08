@@ -54,6 +54,7 @@ To all the DevOps engineers out there with bosses to impress it's easy to do jus
 1. Update the values for the backend in `account/backend.auto.tfvars`
 1. Run the setup with `make setup`
 
+
 ## Creating a new project
 
 To bootsrap the addition of new projects there is a handy shell script,
@@ -61,3 +62,10 @@ To bootsrap the addition of new projects there is a handy shell script,
 - gets the backend variables from the backend `account/backend.auto.tfvars` file
 - creates the new folder with a backend, readme, and makefile
 - symlinks everything in `common` to the new folder
+
+
+## Applying Changes
+
+Once you've made your changes to the terraform code
+and want to make those changes in your actual infrastructure you can use `make apply` to generate
+a plan. It will then prompt you to type `yes` to apply the proposed changes or type literally anything other than `yes` to exit without applying.
