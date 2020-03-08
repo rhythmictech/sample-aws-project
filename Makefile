@@ -4,8 +4,38 @@ WORKSPACE ?= $(TF_WORKSPACE)
 NEW= := $(NEW)
 FOLDER_NAME := $(shell pwd | xargs basename)
 
-.PHONY: init list apply destroy new
-ALL: apply
+.PHONY: setup init list apply destroy new help
+ALL: help
+
+define _help_message
+cat <<EOF
+aws-terraform GNUMakefiles - convenience wrapper for terraform
+usage:
+	make TARGET
+
+Targets:
+	help	  this message
+	setup 	  run bin/setup.sh to set up a new environment
+	clean	  get rid of .terraform directories
+	init	  initialize a new terraform context (.terraform directory)*
+	list	  list workspaces
+	plan 	  produce a plan
+	apply	  apply changes
+	destroy   destroy resources
+	new		  new workspace
+
+The current workspace is set to: $(WORKSPACE)
+
+* if running init for the first time
+specify the workspace you'd like to connect to like so:
+WORKSPACE=staging make init
+
+EOF
+endef
+export help_message = $(_help_message)
+
+help:
+	@eval "$$help_message"
 
 setup:
 	@echo setting up AWS environment
