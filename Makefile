@@ -15,7 +15,6 @@ usage:
 
 Targets:
 	help	  this message
-	setup 	  run bin/setup.sh to set up a new environment
 	clean	  get rid of .terraform directories
 	init	  initialize a new terraform context (.terraform directory)*
 	list	  list workspaces
@@ -36,10 +35,6 @@ export help_message = $(_help_message)
 
 help:
 	@eval "$$help_message"
-
-setup:
-	@echo setting up AWS environment
-	bin/setup.sh
 
 clean:
 	@echo WARNING - removing local terraform dirs
