@@ -11,16 +11,6 @@ terraform {
   required_version = ">= 0.12.0"
 }
 
-# Intentionally throws an error if the workspace doesn't match the env
-# from https://github.com/rhythmictech/terraform-provider-errorcheck
-resource "errorcheck_is_valid" "workspace_should_match_env" {
-  name = "terraform workspace should match env variable"
-  test = {
-    assert        = terraform.workspace == var.env
-    error_message = "Change workspace to match env. Workspace: ${terraform.workspace}, env: ${var.env}"
-  }
-}
-
 # =============================================
 # Variables
 # =============================================
