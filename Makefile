@@ -41,6 +41,8 @@ clean:
 	rm -rf .terraform
 
 init:
+	@echo Installing correct version of terraform
+	tfenv install
 	@echo sourcing environmental variables
 	terraform init -backend-config backend.auto.tfvars -backend-config "key=$(FOLDER_NAME).tfstate"
 
