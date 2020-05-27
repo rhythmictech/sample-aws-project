@@ -1,6 +1,12 @@
 # Account Settings
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | >= 0.12.0 |
+
 ## Providers
 
 | Name | Version |
@@ -10,7 +16,7 @@
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
 | bucket | Bucket that tfstate is stored in | `string` | n/a | yes |
 | dynamodb\_table | DynamoDB table for locking/state management | `string` | n/a | yes |
 | env | Environment being deployed to | `string` | n/a | yes |
