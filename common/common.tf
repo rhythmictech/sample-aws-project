@@ -24,16 +24,6 @@ resource "errorcheck_is_valid" "workspace_should_match_env" {
 # =============================================
 # Variables
 # =============================================
-variable "env" {
-  description = "Environment being deployed to"
-  type        = string
-}
-
-variable "region" {
-  description = "Region resources are being deployed to"
-  type        = string
-}
-
 variable "bucket" {
   description = "Bucket that tfstate is stored in"
   type        = string
@@ -44,7 +34,17 @@ variable "dynamodb_table" {
   type        = string
 }
 
+variable "env" {
+  description = "Environment being deployed to"
+  type        = string
+}
+
 variable "key" {
   description = "Key that tfstate is stored in"
+  type        = string
+}
+
+variable "region" {
+  description = "Region resources are being deployed to"
   type        = string
 }
