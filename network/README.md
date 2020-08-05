@@ -24,6 +24,8 @@
 | dynamodb\_table | DynamoDB table for locking/state management | `string` | n/a | yes |
 | env | Environment being deployed to | `string` | n/a | yes |
 | key | Key that tfstate is stored in | `string` | n/a | yes |
+| namespace | Project name | `string` | n/a | yes |
+| owner | Owner of this infrastructure | `string` | n/a | yes |
 | private\_subnets | n/a | `list(string)` | `[]` | no |
 | public\_subnets | n/a | `list(string)` | `[]` | no |
 | region | Region resources are being deployed to | `string` | n/a | yes |

@@ -18,17 +18,15 @@ module "tags" {
   version = "~> 1.1.0"
 
   names = [
-    var.name,
+    "network",
     var.env,
-    var.region,
-    var.account_id
+    var.namespace
   ]
 
   tags = {
-    Env       = var.env,
-    Namespace = var.namespace,
-    Owner     = var.owner,
-    Region    = var.region
+    "Env"       = var.env,
+    "Namespace" = var.namespace,
+    "Owner"     = var.owner
   }
 }
 

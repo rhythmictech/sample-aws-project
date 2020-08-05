@@ -22,3 +22,17 @@ variable "public_subnets" {
   default = []
   type    = list(string)
 }
+
+########################################
+# General
+########################################
+
+variable "namespace" {
+  description = "Project name"
+  type        = string
+}
+
+variable "owner" {
+  description = "Owner of this infrastructure"
+  type        = string
+}
