@@ -12,6 +12,10 @@ name = "network"
 
 cidr_block = "10.89.0.0/16"
 
+external_zones = [
+  "sblack.rocks"
+]
+
 availability_zones = [
   "us-east-1a",
   "us-east-1b",

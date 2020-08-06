@@ -11,6 +11,7 @@
 
 | Name | Version |
 |------|---------|
+| aws | n/a |
 | errorcheck | n/a |
 | terraform | n/a |
 
@@ -23,6 +24,7 @@
 | cidr\_block | CIDR block for VPC | `string` | n/a | yes |
 | dynamodb\_table | DynamoDB table for locking/state management | `string` | n/a | yes |
 | env | Environment being deployed to | `string` | n/a | yes |
+| external\_zones | List of External Zones to register in R53 | `set(string)` | n/a | yes |
 | key | Key that tfstate is stored in | `string` | n/a | yes |
 | namespace | Project name | `string` | n/a | yes |
 | owner | Owner of this infrastructure | `string` | n/a | yes |

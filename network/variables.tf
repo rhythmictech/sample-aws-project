@@ -13,6 +13,11 @@ variable "cidr_block" {
   type        = string
 }
 
+variable "external_zones" {
+  description = "List of External Zones to register in R53"
+  type        = set(string)
+}
+
 variable "private_subnets" {
   default = []
   type    = list(string)
