@@ -1,9 +1,8 @@
-provider "aws" {
-  region = var.region
-}
 
 module "backend" {
-  source = "git::ssh://git@github.com/rhythmictech/terraform-aws-backend?ref=v2.0.0"
+  source  = "rhythmictech/backend/aws"
+  version = "2.1.0"
+
   bucket = var.bucket
   table  = var.dynamodb_table
   region = var.region

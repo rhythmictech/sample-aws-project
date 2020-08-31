@@ -8,12 +8,12 @@
 # get custom provider
 echo "Downloading error checking provider"
 cd common
-curl -sSL https://raw.githubusercontent.com/rhythmictech/terraform-provider-errorcheck/master/update-provider.sh | bash
+[ -d terraform.d ] || curl -sSL https://raw.githubusercontent.com/rhythmictech/terraform-provider-errorcheck/master/update-provider.sh | bash
 cd ..
 
 echo "Symlinking custom provider to account project"
 cd account
-ln -s ../common/terraform.d .
+[ -d terraform.d ] || ln -s ../common/terraform.d .
 cd ..
 
 # create base infra

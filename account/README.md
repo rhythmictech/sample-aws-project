@@ -30,6 +30,10 @@
 
 ## Outputs
 
-No output.
+| Name | Description |
+|------|-------------|
+| cloudtrail\_log\_group | CloudTrail CloudWatch log group |
+| s3\_bucket\_access\_logging | S3 bucket to receive S3 bucket access logs |
+| s3\_bucket\_access\_logging\_domain\_name | S3 bucket to receive S3 bucket access logs |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
