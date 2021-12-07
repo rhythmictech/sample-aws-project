@@ -1,5 +1,9 @@
 # sample-aws-project
-[![GH Action Status](https://github.com/rhythmictech/sample-aws-project/workflows/pre-commit-check/badge.svg)](https://github.com/rhythmictech/sample-aws-project/actions)
+[![tflint](https://github.com/rhythmictech/sample-aws-project/workflows/tflint/badge.svg?branch=master&event=push)](https://github.com/rhythmictech/sample-aws-project/actions?query=workflow%3Atflint+event%3Apush+branch%3Amaster)
+[![tfsec](https://github.com/rhythmictech/sample-aws-project/workflows/tfsec/badge.svg?branch=master&event=push)](https://github.com/rhythmictech/sample-aws-project/actions?query=workflow%3Atfsec+event%3Apush+branch%3Amaster)
+[![yamllint](https://github.com/rhythmictech/sample-aws-project/workflows/yamllint/badge.svg?branch=master&event=push)](https://github.com/rhythmictech/sample-aws-project/actions?query=workflow%3Ayamllint+event%3Apush+branch%3Amaster)
+[![misspell](https://github.com/rhythmictech/sample-aws-project/workflows/misspell/badge.svg?branch=master&event=push)](https://github.com/rhythmictech/sample-aws-project/actions?query=workflow%3Amisspell+event%3Apush+branch%3Amaster)
+[![pre-commit-check](https://github.com/rhythmictech/sample-aws-project/workflows/pre-commit-check/badge.svg?branch=master&event=push)](https://github.com/rhythmictech/sample-aws-project/actions?query=workflow%3Apre-commit-check+event%3Apush+branch%3Amaster)
 
 
 A sample AWS project managed by Terraform
