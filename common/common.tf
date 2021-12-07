@@ -8,7 +8,7 @@ provider "aws" {
 terraform {
   backend "s3" {}
 
-  required_version = ">= 0.12.0"
+  required_version = ">= 0.13.0"
 }
 
 # Intentionally throws an error if the workspace doesn't match the env
