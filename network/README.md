@@ -5,7 +5,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.12.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.0 |
 
 ## Providers
 
@@ -20,8 +20,8 @@
 |------|--------|---------|
 | <a name="module_does_workspace_match_env"></a> [does\_workspace\_match\_env](#module\_does\_workspace\_match\_env) | rhythmictech/errorcheck/terraform | ~> 1.0.0 |
 | <a name="module_tags"></a> [tags](#module\_tags) | rhythmictech/tags/terraform | ~> 1.1.0 |
-| <a name="module_vpc"></a> [vpc](#module\_vpc) | terraform-aws-modules/vpc/aws | 2.44.0 |
-| <a name="module_vpcflowlogs"></a> [vpcflowlogs](#module\_vpcflowlogs) | rhythmictech/vpcflowlogs/aws | 1.1.2 |
+| <a name="module_vpc"></a> [vpc](#module\_vpc) | terraform-aws-modules/vpc/aws | ~> 2.44.0 |
+| <a name="module_vpcflowlogs"></a> [vpcflowlogs](#module\_vpcflowlogs) | rhythmictech/vpcflowlogs/aws | ~> 1.1.2 |
 
 ## Resources
 

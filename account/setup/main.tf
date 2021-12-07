@@ -1,4 +1,5 @@
 
+#tfsec:ignore:aws-dynamodb-table-customer-key,aws-dynamodb-enable-recovery
 module "backend" {
   source  = "rhythmictech/backend/aws"
   version = "2.1.0"

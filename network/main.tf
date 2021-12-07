@@ -36,7 +36,7 @@ module "tags" {
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "2.44.0"
+  version = "~> 2.44.0"
 
   name               = module.tags.name
   azs                = var.availability_zones
@@ -49,7 +49,7 @@ module "vpc" {
 
 module "vpcflowlogs" {
   source  = "rhythmictech/vpcflowlogs/aws"
-  version = "1.1.2"
+  version = "~> 1.1.2"
 
   create_bucket  = true
   create_kms_key = true
