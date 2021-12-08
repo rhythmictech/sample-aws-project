@@ -36,7 +36,7 @@ module "tags" {
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "~> 2.44.0"
+  version = "~> 3.11.0"
 
   name               = module.tags.name
   azs                = var.availability_zones
@@ -47,13 +47,14 @@ module "vpc" {
   tags               = module.tags.tags
 }
 
+#tfsec:ignore:aws-iam-no-policy-wildcards
 module "vpcflowlogs" {
   source  = "rhythmictech/vpcflowlogs/aws"
   version = "~> 1.1.2"
 
   create_bucket  = true
   create_kms_key = true
-  logging_bucket = data.terraform_remote_state.account.outputs.s3_bucket_access_logging
+  logging_bucket = data.terraform_remote_state.account.outputs.s3_bucket_access_logging_bucket
   region         = var.region
   tags           = module.tags.tags
   vpc_ids        = [module.vpc.vpc_id]
