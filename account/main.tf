@@ -24,10 +24,9 @@ module "rhythmic_iam_roles" {
 
 module "s3logging_bucket" {
   source  = "rhythmictech/s3logging-bucket/aws"
-  version = "~> 1.0.1"
+  version = "~> 2.0.0"
 
   bucket_suffix = "account"
-  region        = var.region
   tags          = module.tags.tags_no_name
 
   # store for 1 yr
@@ -43,14 +42,14 @@ module "s3logging_bucket" {
 module "cloudtrail_bucket" {
   source         = "rhythmictech/cloudtrail-bucket/aws"
   version        = "~> 1.2.0"
-  logging_bucket = module.s3logging_bucket.s3logging_bucket_name
+  logging_bucket = module.s3logging_bucket.s3_bucket_name
   region         = var.region
   tags           = module.tags.tags_no_name
 }
 
 module "cloudtrail_logging" {
   source            = "rhythmictech/cloudtrail-logging/aws"
-  version           = "~> 1.1.0"
+  version           = "~> 1.3.0"
   region            = var.region
   cloudtrail_bucket = module.cloudtrail_bucket.s3_bucket_name
   kms_key_id        = module.cloudtrail_bucket.kms_key_id

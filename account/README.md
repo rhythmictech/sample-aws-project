@@ -3,9 +3,7 @@
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.0 |
+No requirements.
 
 ## Providers
 
@@ -17,11 +15,11 @@ No providers.
 |------|--------|---------|
 | <a name="module_backend"></a> [backend](#module\_backend) | rhythmictech/backend/aws | 2.1.0 |
 | <a name="module_cloudtrail_bucket"></a> [cloudtrail\_bucket](#module\_cloudtrail\_bucket) | rhythmictech/cloudtrail-bucket/aws | ~> 1.2.0 |
-| <a name="module_cloudtrail_logging"></a> [cloudtrail\_logging](#module\_cloudtrail\_logging) | rhythmictech/cloudtrail-logging/aws | ~> 1.1.0 |
+| <a name="module_cloudtrail_logging"></a> [cloudtrail\_logging](#module\_cloudtrail\_logging) | rhythmictech/cloudtrail-logging/aws | ~> 1.3.0 |
 | <a name="module_does_workspace_match_env"></a> [does\_workspace\_match\_env](#module\_does\_workspace\_match\_env) | rhythmictech/errorcheck/terraform | ~> 1.0.0 |
 | <a name="module_iam_password_policy"></a> [iam\_password\_policy](#module\_iam\_password\_policy) | rhythmictech/iam-password-policy/aws | 1.0.0 |
 | <a name="module_rhythmic_iam_roles"></a> [rhythmic\_iam\_roles](#module\_rhythmic\_iam\_roles) | rhythmictech/rhythmic-iam-roles/aws | ~> 1.1.0 |
-| <a name="module_s3logging_bucket"></a> [s3logging\_bucket](#module\_s3logging\_bucket) | rhythmictech/s3logging-bucket/aws | ~> 1.0.1 |
+| <a name="module_s3logging_bucket"></a> [s3logging\_bucket](#module\_s3logging\_bucket) | rhythmictech/s3logging-bucket/aws | ~> 2.0.0 |
 | <a name="module_tags"></a> [tags](#module\_tags) | rhythmictech/tags/terraform | ~> 1.1.0 |
 
 ## Resources
@@ -48,6 +46,6 @@ No resources.
 | Name | Description |
 |------|-------------|
 | <a name="output_cloudtrail_log_group"></a> [cloudtrail\_log\_group](#output\_cloudtrail\_log\_group) | CloudTrail CloudWatch log group |
-| <a name="output_s3_bucket_access_logging"></a> [s3\_bucket\_access\_logging](#output\_s3\_bucket\_access\_logging) | S3 bucket to receive S3 bucket access logs |
+| <a name="output_s3_bucket_access_logging_bucket"></a> [s3\_bucket\_access\_logging\_bucket](#output\_s3\_bucket\_access\_logging\_bucket) | S3 bucket to receive S3 bucket access logs |
 | <a name="output_s3_bucket_access_logging_domain_name"></a> [s3\_bucket\_access\_logging\_domain\_name](#output\_s3\_bucket\_access\_logging\_domain\_name) | S3 bucket to receive S3 bucket access logs |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

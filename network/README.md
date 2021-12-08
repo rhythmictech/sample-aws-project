@@ -3,15 +3,13 @@
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.0 |
+No requirements.
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 3.68.0 |
 | <a name="provider_terraform"></a> [terraform](#provider\_terraform) | n/a |
 
 ## Modules
@@ -20,7 +18,7 @@
 |------|--------|---------|
 | <a name="module_does_workspace_match_env"></a> [does\_workspace\_match\_env](#module\_does\_workspace\_match\_env) | rhythmictech/errorcheck/terraform | ~> 1.0.0 |
 | <a name="module_tags"></a> [tags](#module\_tags) | rhythmictech/tags/terraform | ~> 1.1.0 |
-| <a name="module_vpc"></a> [vpc](#module\_vpc) | terraform-aws-modules/vpc/aws | ~> 2.44.0 |
+| <a name="module_vpc"></a> [vpc](#module\_vpc) | terraform-aws-modules/vpc/aws | ~> 3.11.0 |
 | <a name="module_vpcflowlogs"></a> [vpcflowlogs](#module\_vpcflowlogs) | rhythmictech/vpcflowlogs/aws | ~> 1.1.2 |
 
 ## Resources
