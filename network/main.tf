@@ -45,6 +45,9 @@ module "vpc" {
   private_subnets    = var.private_subnets
   public_subnets     = var.public_subnets
   tags               = module.tags.tags
+
+  # cost savings > performance
+  single_nat_gateway = true
 }
 
 #tfsec:ignore:aws-iam-no-policy-wildcards
